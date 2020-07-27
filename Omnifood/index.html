@@ -264,7 +264,7 @@
                             <p class="plan-price-meal">That's only 13.30$ per meal</p>
                         </div>
                         <div>
-                            <ul>
+                            <ul class="space">
                                 <li><i class="ion-ios-checkmark-empty icon-small"></i> 1 meal every day</li>
                                 <li><i class="ion-ios-checkmark-empty icon-small"></i> Order 24/7 </li>
                                 <li><i class="ion-ios-checkmark-empty icon-small"></i> Access to newest creations</li>
@@ -284,7 +284,7 @@
                             <p class="plan-price-meal">That's only 14.90$ per meal</p>
                         </div>
                         <div>
-                            <ul>
+                            <ul class="space">
                                 <li><i class="ion-ios-checkmark-empty icon-small"></i> 1 meal 10 days/month</li>
                                 <li><i class="ion-ios-checkmark-empty icon-small"></i> Order 24/7 </li>
                                 <li><i class="ion-ios-checkmark-empty icon-small"></i> Access to newest creations</li>
@@ -318,78 +318,81 @@
                 </div>
             </div>
         </section>
-        <section class="section-form" id="form">
-            <div class="row">
+		    
+    
+        <section class="section-form">
+			<div class="row">
                 <h2>We're happy to hear from you</h2>
             </div>
-			   <div class="row">
-                <form method="post" action="mailer.php" class="contact-form">
-                   <div class="row">
-					   <?php
-					  	<div class="form-messages sucess">
-						Thank you! Your message has been sent.
+			   <div class="row">   
+				   <div class="col span-1-of-2">
+					   <div class="form">
+						<form method="post" action="mailer.php" class="contact-form">
+						   <div class="row">
+							</div>
+							<div class="row">
+								<div class="col span-1-of-3">
+									<label for="name">Name</label>
+								</div>
+								<div class="col span-2-of-3">
+									<input type="text" name="name" id="name" placeholder="Your name" required>
+								</div>
+							</div>  
+							<div class="row">
+								<div class="col span-1-of-3">
+									<label for="email">Email</label>
+								</div>
+								<div class="col span-2-of-3">
+									<input type="email" name="email" id="email" placeholder="Your email" required>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col span-1-of-3">
+									<label for="find-us">How did you find us?</label>
+								</div>
+								<div class="col span-2-of-3">
+									<select name="find-us" id="find-us">
+										<option value="friends">Friends</option>
+										<option value="search" selected>Search engine</option>
+										<option value="ad">Advertisement</option>
+										<option value="other">Other</option>
+									</select>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col span-1-of-3">
+									<label for="news">Newsletter</label>
+								</div>
+								<div class="col span-2-of-3">
+									<input type="checkbox" name="news" id="news" checked> Yes, please
+								</div>
+							</div>
+							 <div class="row">
+								<div class="col span-1-of-3">
+									<label>Drop us a line</label>
+								</div>
+								<div class="col span-2-of-3">
+									<textarea name="message" placeholder="Your message"></textarea>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col span-1-of-3">
+									<label>&nbsp;</label>
+								</div>
+								<div class="col span-2-of-3 btn-submit">
+									<input type="submit" value="Send it!">
+								</div>
+							</div>
+						</form>
+					   </div>
+            		</div>
+				   	<div class="col span-1-of-2">
+						<div class="map">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83735.71851678296!2d-9.216531782077316!3d38.74426715066826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd19331a61e4f33b%3A0x400ebbde49036d0!2sLisbon%2C%20Portugal!5e0!3m2!1sen!2srs!4v1595804185862!5m2!1sen!2srs" width="500" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+							</iframe>
 						</div>
-						<div class="form-messages error">
-						Oops! Something went wrong. Please try again.
-						</div>
-						?>
-					</div>
-					<div class="row">
-                        <div class="col span-1-of-3">
-                            <label for="name">Name</label>
-                        </div>
-                        <div class="col span-2-of-3">
-                            <input type="text" name="name" id="name" placeholder="Your name" required>
-                        </div>
-                    </div>  
-                    <div class="row">
-                        <div class="col span-1-of-3">
-                            <label for="email">Email</label>
-                        </div>
-                        <div class="col span-2-of-3">
-                            <input type="email" name="email" id="email" placeholder="Your email" required>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col span-1-of-3">
-                            <label for="find-us">How did you find us?</label>
-                        </div>
-                        <div class="col span-2-of-3">
-                            <select name="find-us" id="find-us">
-                                <option value="friends">Friends</option>
-                                <option value="search" selected>
-                                Search engine</option>
-                                <option value="ad">Advertisement</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col span-1-of-3">
-                            <label for="news">Newsletter</label>
-                        </div>
-                        <div class="col span-2-of-3">
-                            <input type="checkbox" name="news" id="news" checked> Yes, please
-                        </div>
-                    </div>
-                     <div class="row">
-                        <div class="col span-1-of-3">
-                            <label>Drop us a line</label>
-                        </div>
-                        <div class="col span-2-of-3">
-                            <textarea name="message" placeholder="Your message"></textarea>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col span-1-of-3">
-                            <label>&nbsp;</label>
-                        </div>
-                        <div class="col span-2-of-3 btn-submit">
-                            <input type="submit" value="Send it!">
-                        </div>
-                    </div>
-                </form>
-            </div>
+				   	</div>
+				</div>
         </section>
         <footer>
             <div class="row">
@@ -404,7 +407,8 @@
                 </div>
                 <div class="col span-1-of-2">
                     <ul class="social-links">
-                        <li><a href="#"><i class="ion-social-facebook"></i></a></li><li><a href="#"><i class="ion-social-twitter"></i></a></li><li><a href="#"><i class="ion-social-instagram"></i></a></li>
+                        <li><a href="#"><i class="ion-social-facebook"></i></a></li><li><a href="#"><i class="ion-social-twitter"></i></a></li>
+						<li><a href="#"><i class="ion-social-instagram"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -412,12 +416,14 @@
                 <p>Copyright &copy; 2020 by Omnifood. All rights reserved</p>
             </div>
         </footer>
+		
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>">
+        <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/selectivizr@1.0.3/selectivizr.js"></script>
         <script src="vendors/js/jquery.waypoints.min.js"></script>
         <script src="resources/js/script.js"></script>
+
     </body>
 </html>
 
